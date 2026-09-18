@@ -12,12 +12,12 @@ export default function Footer() {
                     </p>
                     <div className="flex gap-2">
                         <img
-                            src="/images/playstore.webp"
+                            src="images/playstore.webp"
                             alt="Google Play"
                             className="h-10 w-auto cursor-pointer"
                         />
                         <img
-                            src="/images/appstore.webp"
+                            src="images/appstore.webp"
                             alt="App Store"
                             className="h-10 w-auto cursor-pointer"
                         />
