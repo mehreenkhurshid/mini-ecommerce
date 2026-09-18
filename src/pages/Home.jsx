@@ -24,7 +24,7 @@ export default function Home() {
 
                 <div className="flex justify-center">
                     <img
-                        src="../../public/images/ecommerce-graphic.jpg"
+                        src="/images/ecommerce-graphic.jpg"
                         alt="Shopping illustration"
                         className="w-80 h-80 md:w-[500px] drop-shadow-lg"
                     />
@@ -38,7 +38,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto ">
                     <div className="border rounded-xl p-6 shadow hover:shadow-lg transition text-center bg-rose-100 ">
                         <img
-                            src="../../public/images/headphones.jpg"
+                            src="/images/headphones.jpg"
                             alt="Product"
                             className="w-full rounded-md transform transition-transform duration-300 hover:scale-105"
                         />
@@ -61,7 +61,7 @@ export default function Home() {
 
                     <div className="border rounded-xl p-6 shadow hover:shadow-lg transition text-center bg-rose-100">
                         <img
-                            src="../../public/images/watch.jpg"
+                            src="/images/watch.jpg"
                             alt="Product"
                             className="w-full rounded-md transform transition-transform duration-300 hover:-translate-y-2"
                         />
@@ -84,7 +84,7 @@ export default function Home() {
 
                     <div className="border rounded-xl p-6 shadow hover:shadow-lg transition text-center bg-rose-100">
                         <img
-                            src="../../public/images/shoess.jpg"
+                            src="/images/shoess.jpg"
                             alt="Product"
                             className="w-full rounded-md transform transition-transform duration-300 hover:scale-105"
                         />
@@ -113,7 +113,7 @@ export default function Home() {
 
                     <div className="flex justify-center">
                         <img
-                            src="../../public/images/laptop.jpg"
+                            src="/images/laptop.jpg"
                             alt="Featured Laptop"
                             className="w-80 md:w-[400px] rounded-lg shadow-lg transform transition duration-300 hover:scale-105"
                         />
