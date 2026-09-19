@@ -1,19 +1,84 @@
-import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import { useState } from "react";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    NavLink,
+} from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import Footer from "./pages/Footer";
 
 export default function App() {
+    const [cartItems, setCartItems] = useState([]);
+
+    const addToCart = (product) => {
+        setCartItems((prevItems) => {
+            const existingItem = prevItems.find(
+                (item) => item.id === product.id
+            );
+
+            if (existingItem) {
+                return prevItems.map((item) =>
+                    item.id === product.id
+                        ? { ...item, quantity: item.quantity + 1 }
+                        : item
+                );
+            }
+
+            return [...prevItems, { ...product, quantity: 1 }];
+        });
+    };
+
+    const removeFromCart = (productId) => {
+        setCartItems((prevItems) =>
+            prevItems.filter((item) => item.id !== productId)
+        );
+    };
+
+    const increaseQuantity = (productId) => {
+        setCartItems((prevItems) =>
+            prevItems.map((item) =>
+                item.id === productId
+                    ? { ...item, quantity: item.quantity + 1 }
+                    : item
+            )
+        );
+    };
+
+    const decreaseQuantity = (productId) => {
+        setCartItems((prevItems) =>
+            prevItems
+                .map((item) =>
+                    item.id === productId
+                        ? { ...item, quantity: item.quantity - 1 }
+                        : item
+                )
+                .filter((item) => item.quantity > 0)
+        );
+    };
+
+    const cartCount = cartItems.reduce(
+        (total, item) => total + item.quantity,
+        0
+    );
+
     return (
         <Router>
             <div className="flex flex-col min-h-screen">
                 <header className="bg-gradient-to-r from-rose-100 to-white shadow">
                     <div className="p-4 flex justify-between items-center max-w-6xl mx-auto">
-                        <NavLink to="/" className="text-2xl font-bold text-rose-500">
-                            MK<span className="text-2xl font-bold text-black">Store</span>
-                            {/*<div className="w-24 h-1 bg-rose-500 mx-auto rounded"></div>*/}
+                        <NavLink
+                            to="/"
+                            className="text-2xl font-bold text-rose-500"
+                        >
+                            MK
+                            <span className="text-2xl font-bold text-black">
+                                Store
+                            </span>
                         </NavLink>
 
                         <nav className="flex gap-4 items-center">
@@ -53,7 +118,17 @@ export default function App() {
                                     }`
                                 }
                             >
-                                <FaShoppingCart /> Cart
+                                <span className="relative">
+                                    <FaShoppingCart />
+
+                                    {cartCount > 0 && (
+                                        <span className="absolute -top-3 -right-3 bg-rose-500 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                                            {cartCount}
+                                        </span>
+                                    )}
+                                </span>
+
+                                Cart
                             </NavLink>
                         </nav>
                     </div>
@@ -61,9 +136,27 @@ export default function App() {
 
                 <main className="flex-grow">
                     <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/products" element={<Products />} />
-                        <Route path="/cart" element={<Cart />} />
+                        <Route
+                            path="/"
+                            element={<Home addToCart={addToCart} />}
+                        />
+
+                        <Route
+                            path="/products"
+                            element={<Products addToCart={addToCart} />}
+                        />
+
+                        <Route
+                            path="/cart"
+                            element={
+                                <Cart
+                                    cartItems={cartItems}
+                                    removeFromCart={removeFromCart}
+                                    increaseQuantity={increaseQuantity}
+                                    decreaseQuantity={decreaseQuantity}
+                                />
+                            }
+                        />
                     </Routes>
                 </main>
 

@@ -1,16 +1,125 @@
-# React + Vite
+# 🛍️ Mini Ecommerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive mini ecommerce website built with **React.js** and **Tailwind CSS**.
 
-Currently, two official plugins are available:
+This project is designed to provide a clean and user-friendly shopping experience where users can browse products, view product information, and manage items in their shopping cart.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project was created as a **frontend UI project** to demonstrate responsive design, reusable React components, product layouts, navigation, and interactive ecommerce functionality.
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React.js
+* JavaScript
+* Tailwind CSS
+* React Router
+* HTML5
+* CSS3
+* Vite
+* React Icons
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Modern and responsive ecommerce UI
+* Product listing
+* Product details
+* Add products to cart
+* Cart management
+* Responsive navigation
+* Reusable React components
+* Mobile-friendly layout
+* Clean and user-friendly interface
+* Responsive design for desktop, tablet, and mobile
+
+## 📂 Main Sections
+
+### 1. Home
+
+A modern homepage introducing the ecommerce store and providing users with an easy way to explore products.
+
+**Features:**
+
+* Hero section
+* Featured content
+* Call-to-action elements
+* Responsive layout
+* Modern ecommerce design
+
+---
+
+### 2. Products
+
+A dedicated product section where users can browse available products and view their details.
+
+**Features:**
+
+* Product cards
+* Product images
+* Product names and prices
+* Product details
+* Add to cart functionality
+* Responsive product grid
+
+---
+
+### 3. Cart
+
+A shopping cart section where users can review and manage the products they have selected.
+
+**Features:**
+
+* Added product display
+* Product quantity management
+* Remove products from cart
+* Price calculation
+* Cart total
+* Responsive cart layout
+
+## 🛠️ Getting Started
+
+Clone the repository:
+
+```bash
+git clone <your-github-repository-url>
+```
+
+Navigate to the project:
+
+```bash
+cd mini-ecommerce
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The project will then be available on the local development server.
+
+## 👩‍💻 About Me
+
+I'm a **Frontend UI Developer** focused on creating modern, responsive, and user-friendly web interfaces using React.js, Next.js, Tailwind CSS, and JavaScript.
+
+I enjoy turning ideas and designs into clean, functional, and responsive web experiences.
+
+## 📬 Contact
+
+**Email:** [mehreenkhurshid8@gmail.com](mailto:mehreenkhurshid8@gmail.com)
+
+**GitHub:** https://github.com/mehreenkhurshid/mini-ecommerce
+
+**LinkedIn:** https://www.linkedin.com/in/mehreen-khurshid-9023562b6
+
+## 📌 Project Status
+
+Mini Ecommerce is a **frontend-focused demo project** created to showcase React.js UI development, responsive design, reusable components, product interfaces, navigation, and basic ecommerce functionality.
+
+---
+
+⭐ Feel free to explore the repository and check out my projects.
